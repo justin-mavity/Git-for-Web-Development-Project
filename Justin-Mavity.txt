@@ -1,45 +1,120 @@
- 1. What is Semantic HTML? 
-    2. What is HTML used for? 
-    3. What is an attribute and where do we put it? 
+https://codepen.io/justinmavity/pen/vYGYBdo?editors=1100
+
+    1. What is Semantic HTML?
+        Semantic HTML introduces meaning to the web page
+        rather than just presentation.
+    2. What is HTML used for?
+        HTML is used to create webpages.
+    3. What is an attribute and where do we put it?
+        An attribute is used to define characteristics of a HTML element. They
+        go inside the elements opening tag.
     4. What is the h1 tag used for? How many times should I use it on a page?
+        The h1 tag is used for the most relevant title to your content.
+        They should only be used one time per page.
     5. Name two tags that have required attributes
-    6. What do we put in the head of our HTML document? 
-    7. What is an id? 
-    8. What elements can I add an id to? 
-    9. How many times can I use the same id on a page? 
-    10. What is a class? 
-    11. What elements can I add a class to? 
-    12. How many times can I use the same class on a page? 
+        The Anchor tag <a>, Image tag <img>
+    6. What do we put in the head of our HTML document?
+        The head is a container for metadata and is placed between the <html>
+        and the <body>
+    7. What is an id?
+        An id is an unique name for an HTML element.
+    8. What elements can I add an id to?
+        You can add an id to all HTML elements.
+    9. How many times can I use the same id on a page?
+        Only once.
+    10. What is a class?
+        A class is an attribute to containe elements for styling in CSS.
+    11. What elements can I add a class to?
+        You can add a class name to all elements.
+    12. How many times can I use the same class on a page?
+        You can use the same class name as many times as you wish.
     13. How do I get my link to open in a new tab?
-    14. What is the alt attribute in the image tag used for? 
+        You use the target:_blank attribute inside our <a> tag.
+    14. What is the alt attribute in the image tag used for?
+        That is used for people that may have a vision problem. It reads
+        out the description for the viewer.
     15. How do I reference an id?
+        In CSS you would use #(idName)
     16. What is the difference between a section and a div
-    17. What is CSS used for? 
+    Section means that the content inside is grouped, while
+     div does not convey any meaning.
+    17. What is CSS used for?
+        Used for styling webpages.
     18. How to we select an element? Example - every h2 on the page
+        Use * h2.
     19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        Id is specific to one attribute. Class on the other hand
+        is used to style things in many locations on a webpage.
     20. How do we select classes in CSS?
+        With .(className)
     21. How do we select a p element with a single class of “human””?
-    22. What is a parent child selector? When would this be useful? 
+        .human p
+    22. What is a parent child selector? When would this be useful?
+        A parent is a container with one or more containers inside their
+        opening and closing tags, known as the child. This helpful if we need to style
+        many elements the same way.
     23. How do you select all links within a div with the class of sidebar?
+        div.sidebar
     24. What is a pseudo selector?
+        An umbrella term used to cover both kinds of selectors.
     25. What do we use the change the spacing between lines?
+        line-height:
     26. What do we use to change the spacing between letters?
+        letter-spacing:
     27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        text-transform:uppercase.
+        text-transfrom:lowercase.
+        :first-letter{
+            text-transform:uppercase.
+        }
+
     28. How do I add a 1px border around my div that is dotted and black?
-    29. How do I select everything on the page? 
+        div{border: 1px dotted black;}
+    29. How do I select everything on the page?
+        * {}
     30. How do I write a comment in CSS?
-    31. How do I find out what file I am in, when I am using the command line? 
+        /*Comment here*/
+    31. How do I find out what file I am in, when I am using the command line?
+        pwd
     32. Using the command line - how do I see a list of files/folders in my current folder?
-    33. How do I remove a file via the command line? Why do Ihave to be careful with this? 
-     34. Why should I use version control? 
+        ls
+    33. How do I remove a file via the command line? Why do I have to be careful with this?
+        del (fileName). You will get no warning or a pop-up window asking if you are sure.
+    34. Why should I use version control?
+        It allows you to see what other people in the team are doing. Since every
+        version control system forces you to enter comments,
+         you can see what changes other people are making.
     35. How often should I commit to github?
-    36. What is the command we would use to push our repo up to github? 
-    37. Walk me through Lambda's git flow. 
+        Every 20 to 30 minutes, or if you get something working.
+    36. What is the command we would use to push our repo up to github?
+        git push
+    37. Walk me through Lambda's git flow.
+        Create your own version of Repo(fork).
+        Your name should be in front of the repo name
+        Add your TL as a collaborator
+        clone your Repo
+        Use the cd command in your CLI, to go to the directory where you want to clone the forked Repo.
+        Use git clone <link-to-repo> command to clone the repo.
+        Cd into the newly created repo
+        Use git checkout -b 'newBranchName' to create your own branch.
+        Work on your repo.
+        Use git add . will add the repo changes.
+        git commit -m "Message" will commit the changes.
+        git push -u origin branch-name will push all of your commits onto github.
+        Submit a Pull Request.
+        Go back to the forked Project repo click on the Branch:master button click your name-branch and then click the New pull request button
+        When you get to the PR page, make sure to click the dropdown button that says base repository and CHANGE it to be your FORKED REPO.
+        Add TL to the Reviewers and then submit the pull request.
 
 Stretch Questions
 
     1. What is the difference between an inline element and a block element?
-    2. What happens when an element is positioned absolutely? 
-    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        Inline element is an element only needs one line, a block element is an element that uses two or more lines.
+    2. What happens when an element is positioned absolutely?
+        They removed entirely from the document flow. They have no effect at all on their parent element or on the elements
+        that occur after them. They will overlap other content unless you take action to prevent it.
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+        Using the Box model
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
-    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
